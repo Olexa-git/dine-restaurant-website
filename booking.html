@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="style/style_booking.css">
+  <script defer type="text/javascript" src="script/script_booking.js"></script>
+  <title>Frontend Mentor | Dine Website Challenge</title>
+</head>
+<body>
+  <header>
+    <img class="header_background" alt="plate with brusket" src="images/booking/hero-bg-desktop.jpg">
+    <img class="logo_header" alt="logo" src="images/logo.svg">
+    <h1>Reservations</h1>
+    <h3>We can’t wait to host you. If you have any special requirements please feel free to 
+  call on the phone number below. We’ll be happy to accommodate you.</h3>    
+  </header>
+  <main>
+    <img class="booking_background" alt="background rectangle" src="images/patterns/pattern-curve-bottom-right.svg">
+    <img class="lines" alt="lines" src="images/patterns/pattern-lines.svg">
+    <div class="booking_form">
+      <form>
+        <input class="booking_name" id="booking_name" type="text" name="name" placeholder="Name">
+        <p class="name_required invisible" id="name_required">This field is required</p>
+        <input class="booking_email" id="booking_email" type="email" name="email" placeholder="Email">
+        <p class="email_required invisible" id="email_required">This field is required</p>
+        <p class="pick_date_sign" id="pick_date_sign">Pick a date</p>
+        <p class="date_required invisible" id="date_required">This field is incomlete</p>
+        <input class="booking_month" id="booking_month" type="number" name="month" placeholder="MM" min="1" max="12">
+        <input class="booking_day" id="booking_day" type="number" name="date" placeholder="DD" min="1" max="31">
+        <input class="booking_year" id="booking_year" type="number" name="year" placeholder="YYYY" min="2023" max="2030">
+        <p class="pick_time_sign" id="pick_time_sign">Pick a time</p>
+        <p class="time_required invisible" id="time_required">This field is incomlete</p>
+        <input class="booking_hours" id="booking_hours" type="number" name="hours" placeholder="00" min="1" max="12">
+        <input class="booking_minutes" id="booking_minutes" type="number" name="minutes" placeholder="00" min="1" max="59">
+        <div class="am_pm_underline"></div>
+        <p class="booking_am_pm" id="booking_am_pm">AM</p>
+        <img class="arrow_am_pm" id="arrow_am_pm" alt="arrow down" src="images/icons/icon-arrow.svg">
+        <ul class="am_pm_box invisible" id="am_pm_box">
+          <li class="am" id="am">
+            <img alt="check icon" src="images/icons/icon-check.svg">
+            <p>AM</p>
+          </li>
+          <li class="pm" id="pm">
+            <img class="invisible" alt="check icon" src="images/icons/icon-check.svg">
+            <p>PM</p>
+          </li>
+        </ul>
+        <div class="persons_underline"></div>
+        <p class="booking_persons_number" id="booking_persons_number">4 people</p>
+        <img class="increase_persons" id="persons_inc" alt="+" src="images/icons/icon-plus.svg">
+        <img class="decrease_persons" id="persons_dec" alt="-" src="images/icons/icon-minus.svg">
+        <input id="reservarion_btn" class="reservarion_btn" type="submit" name="reservation" value="MAKE RESERVATION">
+        </form>
+    </div>
+  </main>
+  <footer>
+    <div class="footer_contacts">
+      <img class="logo_footer" alt="logo" src="images/logo.svg">
+      <p class="adress">Marthwaite, Sedbergh<br>Cumbria<br>+00 44 123 4567</p>
+      <p class="open_hours">Open Times<br>Mon - Fri: 09:00 AM - 10:00 PM<br>Sat - Sun: 09:00 AM - 11:30 PM</p>
+    </div>
+  </footer>
+
+  Name
+  Email
+  Pick a date
+  Pick a time
+
+  Make Reservation
+</body>
+</html>

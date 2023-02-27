@@ -1,0 +1,373 @@
+@font-face {
+	font-family: League Spartan;
+	src: url("../fonts/LeagueSpartan-VariableFont_wght.ttf") format("truetype");
+}
+* {
+	user-select: none;
+	font-family: 'League Spartan';
+	box-sizing: border-box;
+}
+body {
+	position: relative;
+	width: 1440px;
+	height: 1159px;
+	margin: 0 auto;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+.invisible {
+	display: none;
+}
+.header_background {
+	position: absolute;
+	height: 600px;
+	z-index: 0;
+}
+.logo_header {
+	position: absolute;
+	width: 103px;
+	height: 40px;
+	left: 167px;
+	top: 65px;
+}
+header h1 {
+	position: absolute;
+	height: 80px;
+	left: 165px;
+	top: 258px;
+	margin: 0;
+	font-weight: 300;
+	font-size: 80px;
+	line-height: 80px;
+	letter-spacing: -1px;
+	color: #FFFFFF;
+}
+header h3 {
+	position: absolute;
+	height: 90px;
+	left: 165px;
+	width: 445px;
+	top: 356px;
+	margin: 0;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 30px;
+	color: #FFFFFF;
+}
+.booking_background {
+	position: absolute;
+	width: 993px;
+	height: 320px;
+	left: 0;
+	top: 600px;
+	background: #5C6779;
+	mix-blend-mode: normal;
+	opacity: 0.08;
+	border-radius: 100px 0px 0px 0px;
+	transform: rotate(-180deg);
+	z-index: 0;
+}
+.lines {
+	position: absolute;
+	width: 160px;
+	height: 76px;
+	left: 655px;
+	top: 765px;
+	z-index: 1;
+}
+.booking_form {
+	position: absolute;
+	width: 540px;
+	height: 545px;
+	left: 735px;
+	top: 258px;
+	z-index: 2;
+	background: #FFFFFF;
+	box-shadow: 0px 75px 100px -50px rgba(56, 66, 85, 0.503223);
+}
+.booking_name,
+.booking_email,
+.booking_month,
+.booking_day,
+.booking_year,
+.booking_hours,
+.booking_minutes,
+.am_pm_underline,
+.persons_underline {
+	position: absolute;
+	height: 53px;
+	padding-left: 25px;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	border-bottom: 1px solid #8E8E8E;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 28px;
+	color: #111111;
+	mix-blend-mode: normal;
+	opacity: 0.5;
+}
+.name_required,
+.email_required,
+.date_required,
+.time_required {
+	position: absolute;
+	width: 100px;
+	height: 9px;
+	margin: 0;
+	font-weight: 500;
+	font-size: 10px;
+	line-height: 9px;
+	letter-spacing: -0.125px;
+	color: #B54949;
+}
+.name_required {
+	left: 64px;
+	top: 100px;
+}
+.email_required {
+	left: 64px;
+	top: 182px;
+}
+.date_required {
+	left: 48px;
+	top: 250px;
+}
+.time_required {
+	left: 48px;
+	top: 327px;
+}
+
+.booking_name {
+	width: 444px;
+	top: 40px;
+	left: 48px;
+}
+.booking_email {
+	width: 444px;
+	padding-left: 20px;
+	top: 117px;
+	left: 48px;
+}
+.booking_email:invalid,
+.booking_month:invalid,
+.booking_day:invalid,
+.booking_year:invalid,
+.booking_hours:invalid,
+.booking_minutes:invalid {
+	border-color: #B54949;
+	color: #B54949;
+}
+.booking_month {
+	width: 80px;
+	left: 203px;
+	top: 194px;
+}
+.booking_day {
+	width: 80px;
+	left: 299px;
+	top: 194px;
+}
+.booking_year {
+	width: 97px;
+	left: 395px;
+	top: 194px;
+}
+.booking_hours {
+	width: 80px;
+	left: 203px;
+	top: 271px;
+}
+.booking_minutes {
+	width: 80px;
+	left: 299px;
+	top: 271px;
+}
+.am_pm_underline {
+	width: 97px;
+	left: 395px;
+	top: 271px;
+}
+.arrow_am_pm {
+	position: absolute;
+	left: 460px;
+	top: 288px;
+}
+.arrow_am_pm:hover,
+.decrease_persons:hover,
+.increase_persons:hover {
+	cursor: pointer;
+}
+.booking_am_pm {
+	position: absolute;
+	width: 34px;
+	height: 28px;
+	margin: 0;
+	left: 411px;
+	top: 281px;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 28px;
+	color: #111111;
+}
+.am_pm_box {
+	position: absolute;
+	width: 106px;
+	height: 103px;
+	left: 395px;
+	top: 317px;
+	padding-left: 0;
+	background: #FFFFFF;
+	box-shadow: 0px 15px 25px rgba(56, 66, 85, 0.24623);
+	z-index: 1;
+	list-style: none;
+}
+.am {
+	position: absolute;
+	display: flex;
+	width: 60px;
+	height: 28px;
+	left: 18px;
+	top: 16px;
+}
+.am img,
+.pm img {
+	height: 12px;
+	margin-top: 6px;
+}
+.pm {
+	position: absolute;
+	display: flex;
+	width: 60px;
+	height: 28px;
+	left: 16px;
+	top: 62px;
+}
+.am p,
+.pm p {
+	position: absolute;
+	right: 3px;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 28px;
+	color: #111111;
+	margin: 0;
+}
+.am_pm_box li:hover {
+	cursor: pointer;
+}
+.rotate {
+	transform: rotate(180deg);
+}
+.persons_underline {
+	width: 444px;
+	top: 350px;
+	left: 48px;
+}
+.decrease_persons {
+	position: absolute;
+	width: 11px;
+	left: 80px;
+	top: 370px;
+}
+.increase_persons {
+	position: absolute;
+	left: 453px;
+	width: 13px;
+	top: 368px;
+}
+.booking_persons_number {
+	position: absolute;
+	height: 24px;
+	left: 229px;
+	top: 360px;
+	margin: 0;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 24px;
+	letter-spacing: -0.25px;
+	color: #151515;
+}
+.reservarion_btn {
+	position: absolute;
+	width: 444px;
+	height: 64px;
+	left: 48px;
+	top: 433px;
+	padding-top: 4px;
+	background: #111111;
+	font-weight: 600;
+	font-size: 17px;
+	line-height: 28px;
+	text-align: center;
+	letter-spacing: 2.5px;
+	color: #FFFFFF;
+}
+.reservarion_btn:hover {
+	border: 1px solid #111111;
+	background: none;
+	color: #111111;
+	cursor: pointer;
+}
+.pick_date_sign,
+.pick_time_sign {
+	position: absolute;
+	height: 28px;
+	margin: 0;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 28px;
+	color: #111111;
+}
+.pick_date_sign {
+	left: 48px;
+	top: 213px;
+}
+.pick_time_sign {
+	left: 48px;
+	top: 290px;
+}
+.footer_contacts {
+ 	position: absolute;
+ 	width: 1440px;
+	height: 240px;
+	top: 919px;
+	background: #111111;
+	z-index: 0;
+ }
+ .logo_footer {
+	position: absolute;
+	width: 103px;
+	height: 40px;
+	left: 165px;
+	top: 78px;
+	z-index: 1;
+}
+.adress,
+.open_hours {
+	position: absolute;
+	height: 84px;
+	margin: 0;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 28px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+.adress {
+	width: 244px;
+	top: 80px;
+	left: 461px;
+}
+.open_hours {
+	width: 446px;
+	top: 80px;
+	left: 829px;
+}

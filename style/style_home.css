@@ -1,0 +1,485 @@
+@font-face {
+	font-family: League Spartan;
+	src: url("../fonts/LeagueSpartan-VariableFont_wght.ttf") format("truetype");
+}
+* {
+	user-select: none;
+	font-family: 'League Spartan';
+	box-sizing: border-box;
+}
+body {
+	position: relative;
+	width: 1440px;
+	height: 4392px;
+	margin: 0 auto;
+}
+header img {
+	position: absolute;
+	width: 1440px;
+	height: 820px;
+	z-index: 0;
+}
+.invisible {
+	display: none;
+}
+.logo_header {
+	position: absolute;
+	width: 103px;
+	height: 40px;
+	left: 167px;
+	top: 65px;
+	z-index: 2;
+}
+.black_background {
+	position: absolute;
+	width: 545px;
+	height: 820px;
+	background: black;
+	z-index: 1;
+}
+.header_description {
+	position: absolute;
+	width: 507px;
+	height: 364px;
+	left: 165px;
+	top: 258px;
+	z-index: 2;
+}
+.header_description h1 {
+	position: absolute;
+	height: 160px;
+	width: 508px;
+	top: 0;
+	margin: 0;
+	font-weight: 300;
+	font-size: 80px;
+	line-height: 80px;
+	letter-spacing: -1px;
+	color: #FFFFFF;
+}
+.header_description h3 {
+	position: absolute;
+	height: 90px;
+	top: 165px;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 30px;
+	color: #FFFFFF;
+}
+.header_description button {
+	position: absolute;
+	width: 245px;
+	height: 64px;
+	left: 0;
+	bottom: 0;
+	padding-top: 5px;
+	border: 1px solid #FFFFFF;
+	background: black;
+	font-weight: 600;
+	font-size: 17px;
+	line-height: 16px;
+	color: #FFFFFF;
+}
+.header_description button:hover {
+	background: #FFFFFF;
+	color: #111111;
+	cursor: pointer;
+}
+.place_rectangle_background {
+	position: absolute;
+	width: 895px;
+	height: 320px;
+	top: 1070px;
+	background: #5C6779;
+	mix-blend-mode: normal;
+	opacity: 0.08;
+	border-radius: 100px 0px 0px 0px;
+	transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.place_img {
+	position: absolute;
+	width: 540px;
+	height: 720px;
+	left: 165px;
+	top: 750px;
+	z-index: 3;
+	box-shadow: -7px 91px 85px -75px rgba(0,0,0,0.75);
+}
+.place_oval,
+.ingridients_oval,
+.menu_highlights_oval {
+	position: absolute;
+	width: 7px;
+	height: 7px;
+	border: 1px solid #9E7F66;
+	border-radius: 50%;
+}
+.place_oval {
+	left: 830px;
+	top: 997px;
+}
+.place_line,
+.menu_highlights_line,
+.ingridients_line {
+	position: absolute;
+	width: 56px;
+	height: 1px;
+	background: #9E7F66;
+}
+.place_line {
+	left: 845px;
+	top: 1000px;
+}
+.place_description h1,
+.ingridients_description h1,
+.menu_highlights h1 {
+	position: absolute;
+	height: 96px;
+	width: 445px;
+	margin: 0;
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 48px;
+	letter-spacing: -0.5px;
+}
+.place_description h1 {
+	left: 830px;
+	top: 1055px;
+	color: #242B37;
+}
+.place_description h3,
+.ingridients_description h3,
+.menu_highlights h3 {
+	position: absolute;
+	height: 90px;
+	width: 445px;
+	margin: 0;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 30px;
+}
+.place_description h3 {
+	left: 830px;
+	top: 1178px;
+	color: #242B37;
+}
+.ingridients_rectangle_background {
+	position: absolute;
+	width: 895px;
+	height: 320px;
+	left: 545px;
+	top: 1911px;
+	background: #5C6779;
+	mix-blend-mode: normal;
+	opacity: 0.08;
+	border-radius: 100px 0px 0px 0px;
+}
+.ingridients_img {
+	position: absolute;
+	width: 540px;
+	height: 720px;
+	left: 735px;
+	top: 1591px;
+	z-index: 1;
+}
+.ingridients_lines {
+	position: absolute;
+	width: 160px;
+	height: 76px;
+	left: 1229px;
+	top: 1873px;
+}
+.ingridients_oval {
+	left: 165px;
+	top: 1791px;
+}
+.ingridients_line {
+	left: 180px;
+	top: 1794px;
+}
+.ingridients_description h1 {
+	left: 165px;
+	top: 1853px;
+	color: #242B37;
+}
+.ingridients_description h3 {
+	left: 165px;
+	top: 1976px;
+	color: #242B37;
+}
+.menu_highlights {
+	position: absolute;
+	width: 1440px;
+	height: 761px;
+	top: 2231px;
+	background: #111111;
+	z-index: 0;
+}
+.menu_highlights_oval {
+	left: 165px;
+	top: 200px;
+}
+.menu_highlights_line {
+	left: 180px;
+	top: 203px;
+}
+.menu_highlights h1 {
+	left: 165px;
+	top: 262px;
+	color: #FFFFFF;
+}
+.menu_highlights h3 {
+	left: 165px;
+	top: 385px;
+	color: #FFFFFF;
+}
+.menu_items {
+	position: absolute;
+	left: 735px;
+	top: 255px;
+	height: 386px;
+	width: 540px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.menu_items li {
+	position: relative;
+	display: flex;
+	margin-bottom: 49px;
+}
+.menu_item_line {
+	position: absolute;
+	width: 32px;
+	height: 1px;
+	left: 128px;
+	top: 18px;
+	background: #9E7F66;
+}
+.menu_item_name {
+	position: absolute;
+	height: 24px;
+	left: 190px;
+	margin-top: 8px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 24px;
+	letter-spacing: -0.25px;
+	color: #FFFFFF;
+}
+.menu_item_description {
+	position: absolute;
+	height: 52px;
+	left: 190px;
+	margin-top: 38px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 26px;
+	color: #FFFFFF;
+}
+.slides {
+	position: absolute;
+	width: 1440px;
+	height: 870px;
+	top: 2992px;
+	overflow: hidden;
+	z-index: 0;
+}
+.slides_rectangle_background {
+	position: absolute;
+	width: 895px;
+	height: 320px;
+	left: -350px;
+	background: #5C6779;
+	mix-blend-mode: normal;
+	opacity: 0.08;
+	border-radius: 100px 0px 0px 0px;
+	transform: matrix(-1, 0, 0, 1, 0, 0);
+	z-index: 1;
+}
+.slides_lines {
+	position: absolute;
+	width: 160px;
+	height: 76px;
+	left: 125px;
+	top: 122px;
+	z-index: 3;
+}
+.slide {
+	position: absolute;
+	width: 1110px;
+	height: 600px;
+	top: 160px;
+	left: 165px;
+}
+.slide h1 {
+	position: absolute;
+	height: 48px;
+	left: 665px;
+	top: 70px;
+	margin: 0;
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 48px;
+	letter-spacing: -0.5px;
+	color: #242B37;
+}
+.slide h3 {
+	position: absolute;
+	height: 90px;
+	left: 665px;
+	top: 137px;
+	margin: 0;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 30px;
+	color: #242B37;
+}
+.slide button {
+	position: absolute;
+	width: 245px;
+	height: 64px;
+	left: 665px;
+	top: 287px;
+	background: #111111;
+	padding-top: 6px;
+	font-weight: 600;
+	font-size: 17px;
+	line-height: 16px;
+	letter-spacing: 2.5px;
+	color: #FFFFFF;
+}
+.slide button:hover {
+	color: #111111;
+	border: 1px solid #111111;
+	background: #FFFFFF;
+	cursor: pointer;
+}
+.slide img {
+	box-shadow: -1px 68px 120px -77px rgba(0,0,0,0.75);
+}
+.slide_options {
+	position: absolute;
+	width: 322px;
+	height: 108px;
+	left: 705px;
+	top: 575px;
+	margin: 0;
+	padding: 0;
+	z-index: 3;
+}
+.slide_options_line {
+	position: absolute;
+	height: 1px;
+	width: 95px;
+	top: 13px;
+	background: #9E7F66;
+}
+.slide_options li {
+	display: flex;
+	position: relative;
+	height: 28px;
+	margin-bottom: 12px;
+}
+.slide_options_family,
+.slide_options_special,
+.slide_options_social {
+	position: absolute;
+	height: 28px;
+	left: 40.71%;
+	margin: 0 0 16px 0;
+	font-weight: 600;
+	font-size: 17px;
+	line-height: 28px;
+	text-align: center;
+	letter-spacing: 2.5px;
+	color: #4C4C4C;
+	opacity: 1;
+}
+.transparent {
+	opacity: 0.5;
+}
+.slide_options_family:hover,
+.slide_options_special:hover,
+.slide_options_social:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+.footer_booking img {
+	position: absolute;
+	width: 1440px;
+	height: 240px;
+	top: 3912px;
+	z-index: 0;
+}
+.footer_booking p {
+ 	position: absolute;
+	height: 48px;
+	left: 165px;
+	top: 4011px;
+	margin: 0;
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 48px;
+	letter-spacing: -0.5px;
+	color: #FFFFFF;
+	z-index: 1;
+ }
+ .footer_booking button {
+ 	position: absolute;
+	width: 245px;
+	height: 64px;
+	left: 1030px;
+	top: 4000px;
+	border: 1px solid #FFFFFF;
+	background: rgba(0,0,0,0.1);
+	font-weight: 600;
+	font-size: 17px;
+	line-height: 16px;
+	letter-spacing: 2.5px;
+	color: #FFFFFF;
+ }
+ .footer_booking button:hover {
+ 	color: #111111;
+ 	background: #FFFFFF;
+	border: 1px solid #FFFFFF;
+	cursor: pointer;
+ }
+ .footer_contacts {
+ 	position: absolute;
+ 	width: 1440px;
+	height: 240px;
+	top: 4152px;
+	background: #111111;
+	z-index: 0;
+ }
+ .logo_footer {
+	position: absolute;
+	width: 103px;
+	height: 40px;
+	left: 165px;
+	top: 78px;
+	z-index: 1;
+}
+.adress,
+.open_hours {
+	position: absolute;
+	height: 84px;
+	margin: 0;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 28px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+.adress {
+	width: 244px;
+	top: 80px;
+	left: 461px;
+}
+.open_hours {
+	width: 446px;
+	top: 80px;
+	left: 829px;
+}
