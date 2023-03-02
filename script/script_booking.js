@@ -1,4 +1,5 @@
 let number_of_visitors = 4;
+const current_date = new Date();
 const reservarion_btn = document.getElementById("reservarion_btn");
 const booking_name = document.getElementById("booking_name");
 const name_required = document.getElementById("name_required");
@@ -21,8 +22,6 @@ const am = document.getElementById("am");
 const booking_persons_number = document.getElementById("booking_persons_number");
 const persons_inc = document.getElementById("persons_inc");
 const persons_dec = document.getElementById("persons_dec");
-
-
 
 reservarion_btn.addEventListener("click", (evt) => {
 	evt.preventDefault();
@@ -50,10 +49,10 @@ reservarion_btn.addEventListener("click", (evt) => {
 		time_required.classList.add("invisible");
 		pick_time_sign.style.color = "#111111";
 	}
-	if (booking_name.value.length < 3 && booking_email.validity.valid && booking_month.value.length > 0 && booking_month.validity.valid && booking_day.value.length > 0 && booking_day.validity.valid && booking_year.value.length >= 2023 && booking_year.validity.valid && booking_hours.value.length > 0 && booking_hours.validity.valid && booking_minutes.value.length != "" && booking_minutes.validity.valid) {
-		alert('Pleace fill in all field correctly!');
+	if (booking_name.value.length > 2 && booking_email.validity.valid && booking_month.value.length > 0 && booking_month.validity.valid && booking_day.value.length > 0 && booking_day.validity.valid && booking_year.value >= 2023 && booking_year.validity.valid && booking_hours.value.length > 0 && booking_hours.validity.valid && booking_minutes.value.length != "" && booking_minutes.validity.valid) {
+		alert(`Dear ${booking_name.value}, your booking for ${booking_persons_number.innerHTML} was successful! We are waiting for you ${booking_month.value}/${booking_day.value}/${booking_year.value} at ${booking_hours.value}:${booking_minutes.value} ${booking_am_pm.innerHTML} in our restaurant!`);
 	} else {
-		alert("Booked");
+		alert('Pleace fill in all fields correctly!');
 	}
 })
 booking_day.addEventListener("input", () => {
@@ -65,6 +64,18 @@ booking_day.addEventListener("input", () => {
 		booking_day.max = 31;
 	}
 })
+booking_minutes.addEventListener("input", () => {
+	if (booking_minutes.value == 0) {
+		booking_minutes.value = "00";
+	}
+})
+booking_hours.addEventListener("input", () => {
+	if (booking_hours.value < 10) {
+		booking_hours.value = "0" + booking_hours.value;
+		// console.log(booking_hours.value);
+	}
+})
+
 arrow_am_pm.addEventListener("click", () => {
 	am_pm_box.classList.toggle("invisible");
 	arrow_am_pm.classList.toggle("rotate");
@@ -105,3 +116,10 @@ persons_dec.addEventListener("click", () => {
 		booking_persons_number.innerHTML = `${number_of_visitors} people`
 	}
 });
+
+function minimum_date () {
+	booking_month.min = current_date.getMonth()+1;
+	booking_day.min = current_date.getDate();
+	booking_year.min = current_date.getFullYear();
+};
+minimum_date();
