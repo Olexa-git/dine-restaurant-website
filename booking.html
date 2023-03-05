@@ -32,11 +32,11 @@
         <p class="date_required invisible" id="date_required">This field is incomlete</p>
         <input class="booking_month" id="booking_month" type="number" name="month" placeholder="MM" max="12">
         <input class="booking_day" id="booking_day" type="number" name="date" placeholder="DD" max="31">
-        <input class="booking_year" id="booking_year" type="number" name="year" placeholder="YYYY" max="2030">
+        <input class="booking_year" id="booking_year" type="number" name="year" placeholder="YYYY" min="2023" max="2030">
         <p class="pick_time_sign" id="pick_time_sign">Pick a time</p>
         <p class="time_required invisible" id="time_required">This field is incomlete</p>
         <input class="booking_hours" id="booking_hours" type="number" name="hours" placeholder="00" min="01" max="12">
-        <input class="booking_minutes" id="booking_minutes" type="number" name="minutes" placeholder="00" min="00" max="30" step="30">
+        <input class="booking_minutes" id="booking_minutes" type="number" name="minutes" value="00" placeholder="00" min="00" max="30" step="30">
         <div class="am_pm_underline"></div>
         <p class="booking_am_pm" id="booking_am_pm">AM</p>
         <img class="arrow_am_pm" id="arrow_am_pm" alt="arrow down" src="images/icons/icon-arrow.svg">
@@ -65,12 +65,5 @@
       <p class="open_hours">Open Times<br>Mon - Fri: 09:00 AM - 10:00 PM<br>Sat - Sun: 09:00 AM - 11:30 PM</p>
     </div>
   </footer>
-
-  Name
-  Email
-  Pick a date
-  Pick a time
-
-  Make Reservation
 </body>
 </html>

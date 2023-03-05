@@ -25,6 +25,10 @@ const persons_dec = document.getElementById("persons_dec");
 
 reservarion_btn.addEventListener("click", (evt) => {
 	evt.preventDefault();
+	minimum_date();
+	valid_style(booking_month);
+	valid_style(booking_day);
+	valid_style(booking_year);
 	if (booking_name.value.length <= 2) {
 		name_required.classList.remove("invisible");
 	} else {
@@ -51,7 +55,7 @@ reservarion_btn.addEventListener("click", (evt) => {
 	}
 	if (booking_name.value.length > 2 && booking_email.validity.valid && booking_month.value.length > 0 && booking_month.validity.valid && booking_day.value.length > 0 && booking_day.validity.valid && booking_year.value >= 2023 && booking_year.validity.valid && booking_hours.value.length > 0 && booking_hours.validity.valid && booking_minutes.value.length != "" && booking_minutes.validity.valid) {
 		alert(`Dear ${booking_name.value}, your booking for ${booking_persons_number.innerHTML} was successful! We are waiting for you ${booking_month.value}/${booking_day.value}/${booking_year.value} at ${booking_hours.value}:${booking_minutes.value} ${booking_am_pm.innerHTML} in our restaurant!`);
-		reload();
+		window.location.reload();;
 	} else {
 		alert('Pleace fill in all fields correctly!');
 	}
@@ -67,22 +71,35 @@ booking_name.addEventListener("change", () => {
 		booking_name.style.opacity = "1";
 	}
 })
-booking_email.addEventListener("change", () => {
+booking_email.addEventListener("input", () => {
 	valid_style(booking_email)});
 booking_month.addEventListener("change", () => {
-	valid_style(booking_month)});
+	minimum_date();
+	valid_style(booking_month);
+	valid_style(booking_day);
+	valid_style(booking_year);
+});
 booking_day.addEventListener("change", () => {
-	valid_style(booking_day)});
+	minimum_date();
+	valid_style(booking_month);
+	valid_style(booking_day);
+	valid_style(booking_year);
+});
 booking_year.addEventListener("change", () => {
-	valid_style(booking_year)});
+	minimum_date();
+	valid_style(booking_month);
+	valid_style(booking_day);
+	valid_style(booking_year);
+});
 booking_hours.addEventListener("change", () => {
-	valid_style(booking_hours)});
+	valid_style(booking_hours);
+	valid_style(booking_minutes);
+});
 booking_minutes.addEventListener("change", () => {
 	valid_style(booking_minutes)});
 
 
 booking_day.addEventListener("change", () => {
-	minimum_date();
 	if (booking_month.value == 2) {
 		booking_day.max = 28;
 	} else if (booking_month.value == 4 || booking_month.value == 6 || booking_month.value == 9 || booking_month.value == 11) {
@@ -91,20 +108,11 @@ booking_day.addEventListener("change", () => {
 		booking_day.max = 31;
 	}
 })
-booking_month.addEventListener("change", () => {
-	minimum_date();
-})
 booking_minutes.addEventListener("change", () => {
 	if (booking_minutes.value == 0) {
 		booking_minutes.value = "00";
 	}
 })
-booking_hours.addEventListener("change", () => {
-	if (booking_hours.value < 10) {
-		booking_hours.value = "0" + booking_hours.value;
-	}
-})
-
 arrow_am_pm.addEventListener("click", () => {
 	am_pm_box.classList.toggle("invisible");
 	arrow_am_pm.classList.toggle("rotate");
@@ -147,14 +155,14 @@ persons_dec.addEventListener("click", () => {
 });
 
 function valid_style (field) {
-	if (field.validity.valid) {
-		field.style.borderColor = "#111111";
-		field.style.color = "#111111";
-		field.style.opacity = "1";
-	} else {
+	if (field.validity.valid == false || field.value == "") {
 		field.style.borderColor = "#9E7F66";
 		field.style.color = "#9E7F66";
 		field.style.opacity = "0.5";
+	} else {
+		field.style.borderColor = "#111111";
+		field.style.color = "#111111";
+		field.style.opacity = "1";
 	};
 };
 
@@ -168,4 +176,3 @@ function minimum_date () {
 		booking_year.min = current_date.getFullYear();
 	}
 };
-minimum_date();
