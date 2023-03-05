@@ -148,7 +148,7 @@ persons_inc.addEventListener("click", () => {
 	}
 });
 persons_dec.addEventListener("click", () => {
-	if (number_of_visitors > 4) {
+	if (number_of_visitors > 2) {
 		number_of_visitors--;
 		booking_persons_number.innerHTML = `${number_of_visitors} people`
 	}
