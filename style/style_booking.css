@@ -23,10 +23,13 @@ button:focus {
 .invisible {
 	display: none;
 }
-.header_background {
+.header_background_desktop {
 	position: absolute;
 	height: 600px;
 	z-index: 0;
+}
+.header_background_tablet {
+	display: none;
 }
 .logo_header {
 	position: absolute;
@@ -97,7 +100,6 @@ header h3 {
 .booking_year,
 .booking_hours,
 .booking_minutes,
-.am_pm_underline,
 .persons_underline {
 	position: absolute;
 	height: 53px;
@@ -190,9 +192,11 @@ header h3 {
 	top: 271px;
 }
 .am_pm_underline {
+	position: absolute;
 	width: 97px;
 	left: 395px;
-	top: 271px;
+	top: 323px;
+	border-bottom: 1px solid #111111;
 }
 .arrow_am_pm {
 	position: absolute;

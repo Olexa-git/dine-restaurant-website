@@ -1,0 +1,242 @@
+@media screen and (min-device-width: 376px) and (max-device-width: 768px) {
+body {
+	width: 768px;
+	height: 1363px;
+}
+.header_background_desktop,
+.booking_background,
+.lines {
+	display: none;
+}
+.header_background_tablet {
+	display: block;
+	position: absolute;
+	height: 600px;
+	z-index: 0;
+}
+.logo_header {
+	left: 39px;
+	top: 56px;
+}
+header h1 {
+	height: 80px;
+	width: 689px;
+	left: 39px;
+	top: 166px;
+	font-size: 48px;
+	line-height: 64px;
+	letter-spacing: -0.6px;
+	text-align: center;
+}
+header h3 {
+	left: 97px;
+	width: 573px;
+	top: 242px;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 30px;
+	text-align: center;
+}
+.booking_form {
+	left: 114px;
+	top: 370px;
+}
+.footer_contacts {
+ 	width: 768px;
+	height: 328px;
+	top: 1035px;
+ }
+ .logo_footer {
+	left: 39px;
+	top: 64px;
+}
+.adress {
+	width: 456px;
+	top: 66px;
+	left: 272px;
+}
+.open_hours {
+	width: 446px;
+	top: 182px;
+	left: 272px;
+}
+}
+@media screen and (max-width: 375px) {
+body {
+	width: 375px;
+	height: 1574px;
+}
+.header_background_desktop,
+.booking_background,
+.lines,
+.date_required,
+.time_required {
+	display: none;
+}
+.header_background_mobile {
+	display: block;
+	position: absolute;
+	height: 600px;
+	z-index: 0;
+}
+.logo_header {
+	width: 82px;
+	height: 32px;
+	left: 146px;
+	top: 56px;
+}
+header h1 {
+	height: 40px;
+	width: 327px;
+	left: 24px;
+	top: 132px;
+	font-size: 32px;
+	line-height: 40px;
+	letter-spacing: -0.4px;
+	text-align: center;
+}
+header h3 {
+	left: 24px;
+	width: 327px;
+	top: 185px;
+	font-size: 16px;
+	line-height: 26px;
+	text-align: center;
+}
+.booking_form {
+	left: 24px;
+	height: 585px;
+	width: 327px;
+	top: 400px;
+}
+.booking_name,
+.booking_email,
+.booking_month,
+.booking_day,
+.booking_year,
+.booking_hours,
+.booking_minutes,
+.persons_underline {
+	height: 43px;
+}
+.booking_name {
+	width: 263px;
+	top: 34px;
+	left: 32px;
+}
+.booking_email {
+	width: 263px;
+	padding-left: 25px;
+	top: 111px;
+	left: 32px;
+}
+.pick_date_sign {
+	left: 32px;
+	top: 188px;
+}
+.pick_time_sign {
+	left: 32px;
+	top: 301px;
+}
+.booking_month {
+	width: 73px;
+	left: 32px;
+	top: 224px;
+}
+.booking_day {
+	width: 73px;
+	left: 119px;
+	top: 224px;
+}
+.booking_year {
+	width: 73px;
+	left: 207px;
+	top: 224px;
+	padding-left: 15px;
+}
+.booking_hours {
+	width: 73px;
+	left: 32px;
+	top: 337px;
+}
+.booking_minutes {
+	width: 73px;
+	left: 119px;
+	top: 337px;
+}
+.am_pm_underline {
+	width: 73px;
+	left: 207px;
+	top: 378px;
+}
+.arrow_am_pm {
+	left: 263px;
+	top: 344px;
+}
+.booking_am_pm {
+	left: 223px;
+	top: 337px;
+}
+.am_pm_box {
+	width: 106px;
+	height: 103px;
+	left: 200px;
+	top: 370px;
+}
+.persons_underline {
+	width: 263px;
+	top: 414px;
+	left: 32px;
+}
+.decrease_persons {
+	position: absolute;
+	width: 11px;
+	left: 51px;
+	top: 416px;
+}
+.increase_persons {
+	position: absolute;
+	left: 271px;
+	width: 13px;
+	top: 412px;
+}
+.booking_persons_number {
+	height: 24px;
+	left: 128px;
+	top: 405px;
+}
+.reservarion_btn {
+	width: 263px;
+	left: 32px;
+	top: 489px;
+}
+.name_required {
+	left: 32px;
+	top: 82px;
+}
+.email_required {
+	left: 32px;
+	top: 160px;
+}
+.footer_contacts {
+ 	width: 375px;
+	height: 440px;
+	top: 1134px;
+ }
+ .logo_footer {
+	left: 136px;
+	top: 80px;
+}
+.adress {
+	width: 327px;
+	top: 162px;
+	left: 24px;
+	text-align: center;
+}
+.open_hours {
+	width: 327px;
+	top: 278px;
+	left: 24px;
+	text-align: center;
+}
+}

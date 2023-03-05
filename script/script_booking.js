@@ -51,11 +51,38 @@ reservarion_btn.addEventListener("click", (evt) => {
 	}
 	if (booking_name.value.length > 2 && booking_email.validity.valid && booking_month.value.length > 0 && booking_month.validity.valid && booking_day.value.length > 0 && booking_day.validity.valid && booking_year.value >= 2023 && booking_year.validity.valid && booking_hours.value.length > 0 && booking_hours.validity.valid && booking_minutes.value.length != "" && booking_minutes.validity.valid) {
 		alert(`Dear ${booking_name.value}, your booking for ${booking_persons_number.innerHTML} was successful! We are waiting for you ${booking_month.value}/${booking_day.value}/${booking_year.value} at ${booking_hours.value}:${booking_minutes.value} ${booking_am_pm.innerHTML} in our restaurant!`);
+		reload();
 	} else {
 		alert('Pleace fill in all fields correctly!');
 	}
 })
-booking_day.addEventListener("input", () => {
+booking_name.addEventListener("change", () => {
+	if (booking_name.value.length <= 2) {
+		booking_name.style.borderColor = "#9E7F66";
+		booking_name.style.color = "#9E7F66";
+		booking_name.style.opacity = "0.5";
+	} else {
+		booking_name.style.borderColor = "#111111";
+		booking_name.style.color = "#111111";
+		booking_name.style.opacity = "1";
+	}
+})
+booking_email.addEventListener("change", () => {
+	valid_style(booking_email)});
+booking_month.addEventListener("change", () => {
+	valid_style(booking_month)});
+booking_day.addEventListener("change", () => {
+	valid_style(booking_day)});
+booking_year.addEventListener("change", () => {
+	valid_style(booking_year)});
+booking_hours.addEventListener("change", () => {
+	valid_style(booking_hours)});
+booking_minutes.addEventListener("change", () => {
+	valid_style(booking_minutes)});
+
+
+booking_day.addEventListener("change", () => {
+	minimum_date();
 	if (booking_month.value == 2) {
 		booking_day.max = 28;
 	} else if (booking_month.value == 4 || booking_month.value == 6 || booking_month.value == 9 || booking_month.value == 11) {
@@ -64,15 +91,17 @@ booking_day.addEventListener("input", () => {
 		booking_day.max = 31;
 	}
 })
-booking_minutes.addEventListener("input", () => {
+booking_month.addEventListener("change", () => {
+	minimum_date();
+})
+booking_minutes.addEventListener("change", () => {
 	if (booking_minutes.value == 0) {
 		booking_minutes.value = "00";
 	}
 })
-booking_hours.addEventListener("input", () => {
+booking_hours.addEventListener("change", () => {
 	if (booking_hours.value < 10) {
 		booking_hours.value = "0" + booking_hours.value;
-		// console.log(booking_hours.value);
 	}
 })
 
@@ -117,9 +146,26 @@ persons_dec.addEventListener("click", () => {
 	}
 });
 
+function valid_style (field) {
+	if (field.validity.valid) {
+		field.style.borderColor = "#111111";
+		field.style.color = "#111111";
+		field.style.opacity = "1";
+	} else {
+		field.style.borderColor = "#9E7F66";
+		field.style.color = "#9E7F66";
+		field.style.opacity = "0.5";
+	};
+};
+
 function minimum_date () {
-	booking_month.min = current_date.getMonth()+1;
-	booking_day.min = current_date.getDate();
-	booking_year.min = current_date.getFullYear();
+	if (booking_year.value > current_date.getFullYear()) {
+		booking_month.min = 1;
+		booking_day.min = 1;
+	} else {
+		booking_month.min = current_date.getMonth()+1;
+		booking_day.min = current_date.getDate();
+		booking_year.min = current_date.getFullYear();
+	}
 };
 minimum_date();
